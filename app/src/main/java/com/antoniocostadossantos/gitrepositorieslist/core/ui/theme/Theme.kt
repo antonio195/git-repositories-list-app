@@ -1,6 +1,5 @@
-package com.antoniocostadossantos.gitrepositorieslist.ui.theme
+package com.antoniocostadossantos.gitrepositorieslist.core.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

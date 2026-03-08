@@ -1,4 +1,4 @@
-package com.antoniocostadossantos.gitrepositorieslist.ui.theme
+package com.antoniocostadossantos.gitrepositorieslist.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
