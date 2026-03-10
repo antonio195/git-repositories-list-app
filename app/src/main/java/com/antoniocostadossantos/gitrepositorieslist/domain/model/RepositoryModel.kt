@@ -10,7 +10,7 @@ data class RepositoryModel(
     val name: String,
 
     @SerialName("description")
-    val description: String,
+    val description: String?,
 
     @SerialName("forks_count")
     val forksCount: Int,
@@ -31,4 +31,7 @@ data class RepositoryModel(
 
     @SerialName("url")
     val url: String,
+
+    @SerialName("owner")
+    val owner: Owner,
 )

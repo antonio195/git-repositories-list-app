@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.antoniocostadossantos.gitrepositorieslist.domain.repositories.GitRepository
 import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -30,6 +31,7 @@ class HomeViewModel(
             isLoading = true
         )
         viewModelScope.launch(IO) {
+            delay(3000)
             repository.fetchRepositories().collect {
                 _homeViewState.value = _homeViewState.value.copy(
                     isLoading = false,

@@ -13,7 +13,7 @@ class GitRepositoryImpl(
 ) : GitRepository {
     override suspend fun fetchRepositories(): Flow<MainGitModel> = flow {
         val response: MainGitModel =
-            httpClient.get("https://api.github.com/search/repositories?q=kotlin").body()
+            httpClient.get("search/repositories?q=kotlin").body()
 
         emit(response)
     }
