@@ -1,5 +1,6 @@
 package com.antoniocostadossantos.gitrepositorieslist.core.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -32,10 +33,14 @@ fun RepositoryItem(
     repositoryName: String,
     starCount: String,
     forkCount: String,
+    onClick: () -> Unit,
 ) {
     Card(
         modifier = modifier
             .fillMaxWidth()
+            .clickable {
+                onClick()
+            }
     ) {
 
         Row(
@@ -122,6 +127,7 @@ private fun RepositoryItemPreview() {
         urlImage = "",
         repositoryName = "Kotlin",
         starCount = "20",
-        forkCount = "30"
+        forkCount = "30",
+        onClick = {}
     )
 }

@@ -9,4 +9,7 @@ data class Owner(
     val avatarUrl: String,
     @SerialName("html_url")
     val htmlUrl: String,
+
+    @SerialName("login")
+    val login: String,
 )

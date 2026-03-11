@@ -47,11 +47,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     buildFeatures {
         compose = true
@@ -61,9 +58,10 @@ android {
 
 dependencies {
     val koinVersion = "4.1.1"
-    val coilCompose = "3.4.0"
+    val coilComposeVersion = "3.4.0"
     val ktorVersion = "3.4.1"
     val coroutinesVersion = "1.10.2"
+    val navigation3Version = "1.1.0-alpha04"
 
     implementation("io.insert-koin:koin-android:$koinVersion")
     implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
@@ -74,8 +72,10 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
-    implementation("io.coil-kt.coil3:coil-compose:$coilCompose")
-    implementation("io.coil-kt.coil3:coil-network-okhttp:$coilCompose")
+    implementation("io.coil-kt.coil3:coil-compose:$coilComposeVersion")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:$coilComposeVersion")
+    implementation("androidx.navigation3:navigation3-runtime:$navigation3Version")
+    implementation("androidx.navigation3:navigation3-ui:$navigation3Version")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

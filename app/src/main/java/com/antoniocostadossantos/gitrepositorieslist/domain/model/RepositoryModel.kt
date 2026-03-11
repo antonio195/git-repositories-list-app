@@ -9,6 +9,9 @@ data class RepositoryModel(
     @SerialName("name")
     val name: String,
 
+    @SerialName("full_name")
+    val fullName: String,
+
     @SerialName("description")
     val description: String?,
 
@@ -34,4 +37,13 @@ data class RepositoryModel(
 
     @SerialName("owner")
     val owner: Owner,
+
+    @SerialName("score")
+    val score: Double,
+
+    @SerialName("open_issues_count")
+    val openIssues: Int,
+
+    @SerialName("watchers")
+    val watchers: Int,
 )

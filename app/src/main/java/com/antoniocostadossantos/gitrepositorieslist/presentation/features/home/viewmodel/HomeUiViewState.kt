@@ -1,4 +1,4 @@
-package com.antoniocostadossantos.gitrepositorieslist.presentation.features.viewmodel
+package com.antoniocostadossantos.gitrepositorieslist.presentation.features.home.viewmodel
 
 import com.antoniocostadossantos.gitrepositorieslist.domain.model.RepositoryModel
 
